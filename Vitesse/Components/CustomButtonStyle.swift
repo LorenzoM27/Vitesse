@@ -1,3 +1,11 @@
+//
+//  CustomButtonStyle.swift
+//  Vitesse
+//
+//  Created by Lorenzo Menino on 05/02/2025.
+//
+
+
 import SwiftUI
 
 struct CustomButtonStyle: ViewModifier {

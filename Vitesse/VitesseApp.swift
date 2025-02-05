@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct VitesseApp: App {
+    
+    @StateObject var apiService = APIService()
+
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView(loginViewModel: LoginViewModel(apiService: apiService))
         }
+        .environmentObject(apiService)
     }
 }

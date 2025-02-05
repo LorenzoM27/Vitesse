@@ -1,3 +1,13 @@
+//
+//  APIService.swift
+//  Vitesse
+//
+//  Created by Lorenzo Menino on 04/02/2025.
+//
+
+import Foundation
+
+
 class APIService: ObservableObject {
     
     private let baseURL: String
@@ -17,24 +27,19 @@ class APIService: ObservableObject {
 
         var request = URLRequest(url: url)
         request.httpMethod = endpoint.method
+        request.httpBody = endpoint.httpBody
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
+        
         if let token = tokenManager.token {
             request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         }
-
-        request.httpBody = endpoint.httpBody
 
         return request
     }
     
     func request<T: Decodable>(endpoint: APIEndpoint) async throws -> T {
         let request = try createRequest(for: endpoint)
-        let (data, response) = try await session.data(for: request)
-
-        guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-            throw URLError(.badServerResponse)
-        }
+        let (data, _) = try await session.data(for: request)
 
         do {
             let decodedResponse = try JSONDecoder().decode(T.self, from: data)

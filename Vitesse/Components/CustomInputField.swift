@@ -1,5 +1,5 @@
 //
-//  TextFieldComponentView.swift
+//  CustomInputField.swift
 //  Vitesse
 //
 //  Created by Lorenzo Menino on 05/02/2025.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TextFieldComponentView: View {
+struct CustomInputField: View {
     
     var title: String
     var isSecureField = false
@@ -15,7 +15,7 @@ struct TextFieldComponentView: View {
     @Binding var text: String
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .leading, spacing: 0) {
             Text(title)
                 .font(.callout)
                 .padding()
@@ -42,5 +42,5 @@ struct TextFieldComponentView: View {
 }
 
 #Preview {
-    TextFieldComponentView(title: "Email/Username", placeholder: "nom@exemple.com", text: .constant(""))
+    CustomInputField(title: "Email/Username", placeholder: "nom@exemple.com", text: .constant(""))
 }
