@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct LoginView: View {
-    @ObservedObject var loginViewModel: LoginViewModel
+    
+    @StateObject var loginViewModel = LoginViewModel()
+    @ObservedObject var authViewModel: AuthViewModel
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -17,9 +20,9 @@ struct LoginView: View {
                 
                 VStack(alignment: .leading, spacing: 16) {
                     
-                    CustomInputField(title: "Email/Pseudo", placeholder: "exemple@email.com", text: $loginViewModel.emailOrUsername)
+                    OnboardingInputField(title: "Email/Pseudo", placeholder: "exemple@email.com", text: $loginViewModel.emailOrUsername)
                     
-                    CustomInputField(title: "Mot de passe", isSecureField: true, placeholder: "Entrez votre mot de passe", text: $loginViewModel.password)
+                    OnboardingInputField(title: "Mot de passe", isSecureField: true, placeholder: "Entrez votre mot de passe", text: $loginViewModel.password)
                     
                     Text("Mot de pass oublié ?")
                         .font(.footnote)
@@ -27,16 +30,20 @@ struct LoginView: View {
                 }
                 
                 VStack(spacing: 26) {
-                    CustomButton(title: "Connexion") {
-                        Task {
-                            await loginViewModel.login()
+                    
+                    OnboardingButton(title: "Connexion") {
+                        await loginViewModel.login()
+                        if loginViewModel.isLoginSuccessful {
+                            withAnimation(.smooth) {
+                                authViewModel.loginSuccessful()
+                            }
                         }
                     }
                     
-                    NavigationLink(destination: RegistrationView(registrationViewModel: RegistrationViewModel(apiService: APIService()))) {
+                    NavigationLink(destination: RegistrationView()) {
                         Text("S'inscrire")
-                            .customButtonStyle(backgroundColor: .black)
                     }
+                    .customButtonStyle()
                     
                 }
                 .padding(.horizontal, 64)
@@ -48,6 +55,6 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView(loginViewModel: LoginViewModel(apiService: APIService()))
+    LoginView(authViewModel: AuthViewModel())
 }
 

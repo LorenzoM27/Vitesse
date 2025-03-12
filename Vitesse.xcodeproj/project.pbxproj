@@ -7,14 +7,28 @@
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
-		6E042FBC2D525A4A00C1ACCB /* PBXContainerItemProxy */ = {
+		6E62C8342D81C2C0009DF6E9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6E042FA32D525A4700C1ACCB /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6E042FAA2D525A4700C1ACCB;
 			remoteInfo = Vitesse;
 		};
-		6E042FC62D525A4A00C1ACCB /* PBXContainerItemProxy */ = {
+		6E62C8462D81C685009DF6E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E042FA32D525A4700C1ACCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E042FAA2D525A4700C1ACCB;
+			remoteInfo = Vitesse;
+		};
+		6E62C8572D81CBF7009DF6E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E042FA32D525A4700C1ACCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E042FAA2D525A4700C1ACCB;
+			remoteInfo = Vitesse;
+		};
+		6E62C8682D81CF1A009DF6E9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6E042FA32D525A4700C1ACCB /* Project object */;
 			proxyType = 1;
@@ -25,24 +39,64 @@
 
 /* Begin PBXFileReference section */
 		6E042FAB2D525A4700C1ACCB /* Vitesse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vitesse.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E042FBB2D525A4A00C1ACCB /* VitesseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VitesseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E042FC52D525A4A00C1ACCB /* VitesseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VitesseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E62C8302D81C2C0009DF6E9 /* LoginViewModelTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginViewModelTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E62C8422D81C685009DF6E9 /* CandidateRepositoryTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CandidateRepositoryTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E62C8532D81CBF6009DF6E9 /* RegistrationViewModelTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegistrationViewModelTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E62C8642D81CF19009DF6E9 /* CandidateDetailViewModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CandidateDetailViewModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		6E62C83C2D81C2CB009DF6E9 /* Exceptions for "Vitesse" folder in "Vitesse" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Tests/CandidateDetailViewModelTests/CandidateDetailViewModelTests.swift,
+				Tests/CandidateRepositoryTest/CandidateRepositoryTest.swift,
+				Tests/LoginViewModelTest/LoginViewModelTest.swift,
+				Tests/RegistrationViewModelTest/RegistrationViewModelTest.swift,
+			);
+			target = 6E042FAA2D525A4700C1ACCB /* Vitesse */;
+		};
+		6E62C83D2D81C2CB009DF6E9 /* Exceptions for "Vitesse" folder in "LoginViewModelTest" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Tests/LoginViewModelTest/LoginViewModelTest.swift,
+			);
+			target = 6E62C82F2D81C2C0009DF6E9 /* LoginViewModelTest */;
+		};
+		6E62C84E2D81C68A009DF6E9 /* Exceptions for "Vitesse" folder in "CandidateRepositoryTest" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Tests/CandidateRepositoryTest/CandidateRepositoryTest.swift,
+			);
+			target = 6E62C8412D81C685009DF6E9 /* CandidateRepositoryTest */;
+		};
+		6E62C85F2D81CBFB009DF6E9 /* Exceptions for "Vitesse" folder in "RegistrationViewModelTest" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Tests/RegistrationViewModelTest/RegistrationViewModelTest.swift,
+			);
+			target = 6E62C8522D81CBF6009DF6E9 /* RegistrationViewModelTest */;
+		};
+		6E62C8702D81CF1D009DF6E9 /* Exceptions for "Vitesse" folder in "CandidateDetailViewModelTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Tests/CandidateDetailViewModelTests/CandidateDetailViewModelTests.swift,
+			);
+			target = 6E62C8632D81CF19009DF6E9 /* CandidateDetailViewModelTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		6E042FAD2D525A4700C1ACCB /* Vitesse */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6E62C83C2D81C2CB009DF6E9 /* Exceptions for "Vitesse" folder in "Vitesse" target */,
+				6E62C83D2D81C2CB009DF6E9 /* Exceptions for "Vitesse" folder in "LoginViewModelTest" target */,
+				6E62C84E2D81C68A009DF6E9 /* Exceptions for "Vitesse" folder in "CandidateRepositoryTest" target */,
+				6E62C85F2D81CBFB009DF6E9 /* Exceptions for "Vitesse" folder in "RegistrationViewModelTest" target */,
+				6E62C8702D81CF1D009DF6E9 /* Exceptions for "Vitesse" folder in "CandidateDetailViewModelTests" target */,
+			);
 			path = Vitesse;
-			sourceTree = "<group>";
-		};
-		6E042FBE2D525A4A00C1ACCB /* VitesseTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = VitesseTests;
-			sourceTree = "<group>";
-		};
-		6E042FC82D525A4A00C1ACCB /* VitesseUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = VitesseUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -55,14 +109,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E042FB82D525A4A00C1ACCB /* Frameworks */ = {
+		6E62C82D2D81C2C0009DF6E9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E042FC22D525A4A00C1ACCB /* Frameworks */ = {
+		6E62C83F2D81C685009DF6E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E62C8502D81CBF6009DF6E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E62C8612D81CF19009DF6E9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,8 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				6E042FAD2D525A4700C1ACCB /* Vitesse */,
-				6E042FBE2D525A4A00C1ACCB /* VitesseTests */,
-				6E042FC82D525A4A00C1ACCB /* VitesseUITests */,
 				6E042FAC2D525A4700C1ACCB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,8 +152,10 @@
 			isa = PBXGroup;
 			children = (
 				6E042FAB2D525A4700C1ACCB /* Vitesse.app */,
-				6E042FBB2D525A4A00C1ACCB /* VitesseTests.xctest */,
-				6E042FC52D525A4A00C1ACCB /* VitesseUITests.xctest */,
+				6E62C8302D81C2C0009DF6E9 /* LoginViewModelTest.xctest */,
+				6E62C8422D81C685009DF6E9 /* CandidateRepositoryTest.xctest */,
+				6E62C8532D81CBF6009DF6E9 /* RegistrationViewModelTest.xctest */,
+				6E62C8642D81CF19009DF6E9 /* CandidateDetailViewModelTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,51 +185,85 @@
 			productReference = 6E042FAB2D525A4700C1ACCB /* Vitesse.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6E042FBA2D525A4A00C1ACCB /* VitesseTests */ = {
+		6E62C82F2D81C2C0009DF6E9 /* LoginViewModelTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E042FD22D525A4A00C1ACCB /* Build configuration list for PBXNativeTarget "VitesseTests" */;
+			buildConfigurationList = 6E62C8362D81C2C0009DF6E9 /* Build configuration list for PBXNativeTarget "LoginViewModelTest" */;
 			buildPhases = (
-				6E042FB72D525A4A00C1ACCB /* Sources */,
-				6E042FB82D525A4A00C1ACCB /* Frameworks */,
-				6E042FB92D525A4A00C1ACCB /* Resources */,
+				6E62C82C2D81C2C0009DF6E9 /* Sources */,
+				6E62C82D2D81C2C0009DF6E9 /* Frameworks */,
+				6E62C82E2D81C2C0009DF6E9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6E042FBD2D525A4A00C1ACCB /* PBXTargetDependency */,
+				6E62C8352D81C2C0009DF6E9 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				6E042FBE2D525A4A00C1ACCB /* VitesseTests */,
-			);
-			name = VitesseTests;
+			name = LoginViewModelTest;
 			packageProductDependencies = (
 			);
-			productName = VitesseTests;
-			productReference = 6E042FBB2D525A4A00C1ACCB /* VitesseTests.xctest */;
+			productName = LoginViewModelTest;
+			productReference = 6E62C8302D81C2C0009DF6E9 /* LoginViewModelTest.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6E042FC42D525A4A00C1ACCB /* VitesseUITests */ = {
+		6E62C8412D81C685009DF6E9 /* CandidateRepositoryTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E042FD52D525A4A00C1ACCB /* Build configuration list for PBXNativeTarget "VitesseUITests" */;
+			buildConfigurationList = 6E62C8482D81C685009DF6E9 /* Build configuration list for PBXNativeTarget "CandidateRepositoryTest" */;
 			buildPhases = (
-				6E042FC12D525A4A00C1ACCB /* Sources */,
-				6E042FC22D525A4A00C1ACCB /* Frameworks */,
-				6E042FC32D525A4A00C1ACCB /* Resources */,
+				6E62C83E2D81C685009DF6E9 /* Sources */,
+				6E62C83F2D81C685009DF6E9 /* Frameworks */,
+				6E62C8402D81C685009DF6E9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6E042FC72D525A4A00C1ACCB /* PBXTargetDependency */,
+				6E62C8472D81C685009DF6E9 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				6E042FC82D525A4A00C1ACCB /* VitesseUITests */,
-			);
-			name = VitesseUITests;
+			name = CandidateRepositoryTest;
 			packageProductDependencies = (
 			);
-			productName = VitesseUITests;
-			productReference = 6E042FC52D525A4A00C1ACCB /* VitesseUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
+			productName = CandidateRepositoryTest;
+			productReference = 6E62C8422D81C685009DF6E9 /* CandidateRepositoryTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6E62C8522D81CBF6009DF6E9 /* RegistrationViewModelTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E62C8592D81CBF7009DF6E9 /* Build configuration list for PBXNativeTarget "RegistrationViewModelTest" */;
+			buildPhases = (
+				6E62C84F2D81CBF6009DF6E9 /* Sources */,
+				6E62C8502D81CBF6009DF6E9 /* Frameworks */,
+				6E62C8512D81CBF6009DF6E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E62C8582D81CBF7009DF6E9 /* PBXTargetDependency */,
+			);
+			name = RegistrationViewModelTest;
+			packageProductDependencies = (
+			);
+			productName = RegistrationViewModelTest;
+			productReference = 6E62C8532D81CBF6009DF6E9 /* RegistrationViewModelTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6E62C8632D81CF19009DF6E9 /* CandidateDetailViewModelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E62C86A2D81CF1A009DF6E9 /* Build configuration list for PBXNativeTarget "CandidateDetailViewModelTests" */;
+			buildPhases = (
+				6E62C8602D81CF19009DF6E9 /* Sources */,
+				6E62C8612D81CF19009DF6E9 /* Frameworks */,
+				6E62C8622D81CF19009DF6E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E62C8692D81CF1A009DF6E9 /* PBXTargetDependency */,
+			);
+			name = CandidateDetailViewModelTests;
+			packageProductDependencies = (
+			);
+			productName = CandidateDetailViewModelTests;
+			productReference = 6E62C8642D81CF19009DF6E9 /* CandidateDetailViewModelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -176,11 +278,19 @@
 					6E042FAA2D525A4700C1ACCB = {
 						CreatedOnToolsVersion = 16.2;
 					};
-					6E042FBA2D525A4A00C1ACCB = {
+					6E62C82F2D81C2C0009DF6E9 = {
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = 6E042FAA2D525A4700C1ACCB;
 					};
-					6E042FC42D525A4A00C1ACCB = {
+					6E62C8412D81C685009DF6E9 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 6E042FAA2D525A4700C1ACCB;
+					};
+					6E62C8522D81CBF6009DF6E9 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 6E042FAA2D525A4700C1ACCB;
+					};
+					6E62C8632D81CF19009DF6E9 = {
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = 6E042FAA2D525A4700C1ACCB;
 					};
@@ -201,8 +311,10 @@
 			projectRoot = "";
 			targets = (
 				6E042FAA2D525A4700C1ACCB /* Vitesse */,
-				6E042FBA2D525A4A00C1ACCB /* VitesseTests */,
-				6E042FC42D525A4A00C1ACCB /* VitesseUITests */,
+				6E62C82F2D81C2C0009DF6E9 /* LoginViewModelTest */,
+				6E62C8412D81C685009DF6E9 /* CandidateRepositoryTest */,
+				6E62C8522D81CBF6009DF6E9 /* RegistrationViewModelTest */,
+				6E62C8632D81CF19009DF6E9 /* CandidateDetailViewModelTests */,
 			);
 		};
 /* End PBXProject section */
@@ -215,14 +327,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E042FB92D525A4A00C1ACCB /* Resources */ = {
+		6E62C82E2D81C2C0009DF6E9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E042FC32D525A4A00C1ACCB /* Resources */ = {
+		6E62C8402D81C685009DF6E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E62C8512D81CBF6009DF6E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E62C8622D81CF19009DF6E9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -239,14 +365,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E042FB72D525A4A00C1ACCB /* Sources */ = {
+		6E62C82C2D81C2C0009DF6E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E042FC12D525A4A00C1ACCB /* Sources */ = {
+		6E62C83E2D81C685009DF6E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E62C84F2D81CBF6009DF6E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E62C8602D81CF19009DF6E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -256,15 +396,25 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6E042FBD2D525A4A00C1ACCB /* PBXTargetDependency */ = {
+		6E62C8352D81C2C0009DF6E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6E042FAA2D525A4700C1ACCB /* Vitesse */;
-			targetProxy = 6E042FBC2D525A4A00C1ACCB /* PBXContainerItemProxy */;
+			targetProxy = 6E62C8342D81C2C0009DF6E9 /* PBXContainerItemProxy */;
 		};
-		6E042FC72D525A4A00C1ACCB /* PBXTargetDependency */ = {
+		6E62C8472D81C685009DF6E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6E042FAA2D525A4700C1ACCB /* Vitesse */;
-			targetProxy = 6E042FC62D525A4A00C1ACCB /* PBXContainerItemProxy */;
+			targetProxy = 6E62C8462D81C685009DF6E9 /* PBXContainerItemProxy */;
+		};
+		6E62C8582D81CBF7009DF6E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E042FAA2D525A4700C1ACCB /* Vitesse */;
+			targetProxy = 6E62C8572D81CBF7009DF6E9 /* PBXContainerItemProxy */;
+		};
+		6E62C8692D81CF1A009DF6E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E042FAA2D525A4700C1ACCB /* Vitesse */;
+			targetProxy = 6E62C8682D81CF1A009DF6E9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -446,7 +596,7 @@
 			};
 			name = Release;
 		};
-		6E042FD32D525A4A00C1ACCB /* Debug */ = {
+		6E62C8372D81C2C0009DF6E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -454,9 +604,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NH322A5M6D;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.LorenzoM.VitesseTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LorenzoM.LoginViewModelTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -465,7 +614,7 @@
 			};
 			name = Debug;
 		};
-		6E042FD42D525A4A00C1ACCB /* Release */ = {
+		6E62C8382D81C2C0009DF6E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -473,9 +622,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NH322A5M6D;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.LorenzoM.VitesseTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LorenzoM.LoginViewModelTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -484,37 +632,111 @@
 			};
 			name = Release;
 		};
-		6E042FD62D525A4A00C1ACCB /* Debug */ = {
+		6E62C8492D81C685009DF6E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NH322A5M6D;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.LorenzoM.VitesseUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LorenzoM.CandidateRepositoryTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Vitesse;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vitesse.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Vitesse";
 			};
 			name = Debug;
 		};
-		6E042FD72D525A4A00C1ACCB /* Release */ = {
+		6E62C84A2D81C685009DF6E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NH322A5M6D;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.LorenzoM.VitesseUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LorenzoM.CandidateRepositoryTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Vitesse;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vitesse.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Vitesse";
+			};
+			name = Release;
+		};
+		6E62C85A2D81CBF7009DF6E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NH322A5M6D;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LorenzoM.RegistrationViewModelTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vitesse.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Vitesse";
+			};
+			name = Debug;
+		};
+		6E62C85B2D81CBF7009DF6E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NH322A5M6D;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LorenzoM.RegistrationViewModelTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vitesse.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Vitesse";
+			};
+			name = Release;
+		};
+		6E62C86B2D81CF1A009DF6E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NH322A5M6D;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LorenzoM.CandidateDetailViewModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vitesse.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Vitesse";
+			};
+			name = Debug;
+		};
+		6E62C86C2D81CF1A009DF6E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NH322A5M6D;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LorenzoM.CandidateDetailViewModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vitesse.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Vitesse";
 			};
 			name = Release;
 		};
@@ -539,20 +761,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E042FD22D525A4A00C1ACCB /* Build configuration list for PBXNativeTarget "VitesseTests" */ = {
+		6E62C8362D81C2C0009DF6E9 /* Build configuration list for PBXNativeTarget "LoginViewModelTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6E042FD32D525A4A00C1ACCB /* Debug */,
-				6E042FD42D525A4A00C1ACCB /* Release */,
+				6E62C8372D81C2C0009DF6E9 /* Debug */,
+				6E62C8382D81C2C0009DF6E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E042FD52D525A4A00C1ACCB /* Build configuration list for PBXNativeTarget "VitesseUITests" */ = {
+		6E62C8482D81C685009DF6E9 /* Build configuration list for PBXNativeTarget "CandidateRepositoryTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6E042FD62D525A4A00C1ACCB /* Debug */,
-				6E042FD72D525A4A00C1ACCB /* Release */,
+				6E62C8492D81C685009DF6E9 /* Debug */,
+				6E62C84A2D81C685009DF6E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E62C8592D81CBF7009DF6E9 /* Build configuration list for PBXNativeTarget "RegistrationViewModelTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E62C85A2D81CBF7009DF6E9 /* Debug */,
+				6E62C85B2D81CBF7009DF6E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E62C86A2D81CF1A009DF6E9 /* Build configuration list for PBXNativeTarget "CandidateDetailViewModelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E62C86B2D81CF1A009DF6E9 /* Debug */,
+				6E62C86C2D81CF1A009DF6E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

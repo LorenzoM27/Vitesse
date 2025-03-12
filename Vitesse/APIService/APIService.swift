@@ -8,7 +8,7 @@
 import Foundation
 
 
-class APIService: ObservableObject {
+class APIService {
     
     private let baseURL: String
     private let tokenManager: TokenManager
@@ -31,6 +31,7 @@ class APIService: ObservableObject {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         if let token = tokenManager.token {
+            print("Token : \(token)")
             request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         }
 

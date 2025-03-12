@@ -7,8 +7,10 @@
 
 import Foundation
 
+import Foundation
+
 @MainActor
-final class CandidatesRepository: ObservableObject {//Repository
+final class CandidatesRepository: ObservableObject {
     
     @Published var email = ""
     @Published var note = ""
@@ -17,7 +19,7 @@ final class CandidatesRepository: ObservableObject {//Repository
     @Published var lastName = ""
     @Published var phone = ""
     
-    @Published var candidatesList: [CandidateDTO] = []//Créer un autre model, celui la seulement pour récupérer les données
+    @Published var candidates: [Candidate] = []
     
     private let apiService: APIService
     
@@ -25,31 +27,59 @@ final class CandidatesRepository: ObservableObject {//Repository
         self.apiService = apiService
     }
     
-    
     func fetchCandidatesList() async {
-        
         let endpoint = APIEndpoint.getCandidates
         
         do {
             let candidatesListResponse: [CandidateDTO] = try await apiService.request(endpoint: endpoint)
-            print("Réponse reçue :", candidatesListResponse)
-            candidatesList = candidatesListResponse
+            self.candidates = candidatesListResponse.map { Candidate(from: $0) }
         } catch {
-            print("Error : Imposible to fetch candidates list \(error.localizedDescription)")
+            print("Error : Impossible to fetch candidates list \(error.localizedDescription)")
+        }
+    }
+    
+    func addCandidate() async {
+        let endpoint = APIEndpoint.createCandidate(email: email, firstName: firstName, lastName: lastName, phone: phone, note: note, linkedinURL: linkedinURL)
+        
+        do {
+            let newCandidateDTO: CandidateDTO = try await apiService.request(endpoint: endpoint)
+            let newCandidate = Candidate(from: newCandidateDTO)
+            
+            candidates.insert(newCandidate, at: 0)
+            print("Candidat ajouté :", newCandidate)
+        } catch {
+            print("Error : Impossible d'ajouter un candidat \(error.localizedDescription)")
+        }
+    }
+    
+    func deleteCandidate(id: String) async {
+        let endpoint = APIEndpoint.deleteCandidate(candidateId: id)
+        print("ID du candidat : \(id)")
+        
+        do {
+            try await apiService.requestWithoutReturn(endpoint: endpoint)
+            candidates.removeAll { $0.id.uuidString == id }
+        } catch {
+            print("Error : Impossible to delete : \(error.localizedDescription)")
         }
     }
     
     
-    func addCandidat() async {
-        let endpoint = APIEndpoint.createCandidate(email: email, firstName: firstName, lastName: lastName, phone: phone, note: note, linkedinURL: linkedinURL)
+    func updateFavorite(candidateId: String) async {
+        let endpoint = APIEndpoint.updateFavoriteStatus(candidateId: candidateId)
+        print("ID du candidat : \(candidateId)")
         
         do {
-            let addCandidatResponse : [CandidateDTO] = try await apiService.request(endpoint: endpoint)
-            candidatesList = addCandidatResponse
-            print("Réponse reçue :", addCandidatResponse)
-            print("Réponse :", candidatesList)
+            let updatedCandidateDTO : CandidateDTO = try await apiService.request(endpoint: endpoint)
+            let updatedCandidate = Candidate(from: updatedCandidateDTO)
+            
+            if let index = candidates.firstIndex(where: { $0.id == updatedCandidate.id }) {
+                        candidates[index] = updatedCandidate
+                    }
+            
+            print(updatedCandidate)
         } catch {
-            print("Error : Imposible to add candidates \(error.localizedDescription)")
+            print("Error : Impossible de modifier le favoris \(error.localizedDescription)")
         }
     }
 }

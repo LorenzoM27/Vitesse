@@ -9,13 +9,13 @@
 import Foundation
 
 
-struct CandidateDto: Identifiable, Decodable {
+struct CandidateDTO: Identifiable, Decodable {
     let id: UUID
     let firstName: String
     let lastName: String
     let email: String
-    var phone: String?
-    var note: String?
-    var linkedinURL: String?
-    var isFavorite: Bool
+    let phone: String
+    let note: String?
+    let linkedinURL: String?
+    let isFavorite: Bool
 }

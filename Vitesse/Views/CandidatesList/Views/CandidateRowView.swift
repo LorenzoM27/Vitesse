@@ -8,11 +8,38 @@
 import SwiftUI
 
 struct CandidateRowView: View {
+    
+    @ObservedObject var candidateFavorite : CandidatesRepository
+    let candidate : Candidate
+//    let firstName: String
+//    let lastName: String
+//    let isFavorite: Bool
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text("\(candidate.firstName) \(candidate.lastName)")
+            Spacer()
+            
+            if AdminManager.shared.isAdmin {
+                Button {
+                    Task {
+                       await candidateFavorite.updateFavorite(candidateId: "\(candidate.id)")
+                    }
+                } label: {
+                    Image(systemName: candidate.isFavorite ? "star.fill": "star")
+                }
+               .buttonStyle(.plain)
+
+            }
+        }
+        .padding()
+        .overlay(
+            RoundedRectangle(cornerRadius: 8)
+                .stroke(Color.black, lineWidth: 2)
+        )
     }
 }
 
-#Preview {
-    CandidateRowView()
-}
+//#Preview {
+//    CandidateRowView(candidateFavorite: CandidatesRepository(), candidate: candidateFavorite.candidates[0])
+//}

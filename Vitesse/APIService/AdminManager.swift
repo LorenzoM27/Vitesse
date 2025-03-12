@@ -10,7 +10,7 @@ import Foundation
 
 final class AdminManager  {
     
-    var isAdmin: Bool?
+    var isAdmin: Bool = false
     
     static let shared = AdminManager()
     

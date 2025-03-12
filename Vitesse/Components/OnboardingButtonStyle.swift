@@ -9,7 +9,6 @@
 import SwiftUI
 
 private struct OnboardingButtonStyle: ViewModifier {
-    var backgroundColor: Color
 
     func body(content: Content) -> some View {
         content
@@ -17,13 +16,13 @@ private struct OnboardingButtonStyle: ViewModifier {
             .foregroundColor(.white)
             .padding()
             .frame(maxWidth: .infinity)
-            .background(backgroundColor)
+            .background(.black)
             .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }
 
 extension View {
-    func customButtonStyle(backgroundColor: Color) -> some View {
-        self.modifier(OnboardingButtonStyle(backgroundColor: backgroundColor))
+    func customButtonStyle() -> some View {
+        self.modifier(OnboardingButtonStyle())
     }
 }

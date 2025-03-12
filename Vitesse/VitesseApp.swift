@@ -10,13 +10,15 @@ import SwiftUI
 @main
 struct VitesseApp: App {
     
-    @StateObject var apiService = APIService()
-
+    @StateObject private var authViewModel = AuthViewModel()
     
     var body: some Scene {
         WindowGroup {
-            LoginView(loginViewModel: LoginViewModel(apiService: apiService))
-        }
-        .environmentObject(apiService)
+                   if authViewModel.isAuthenticated {
+                       CandidatesListView()
+                   } else {
+                       LoginView(authViewModel: authViewModel)
+                   }
+               }
     }
 }

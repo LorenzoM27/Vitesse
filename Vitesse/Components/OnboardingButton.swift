@@ -21,7 +21,7 @@ struct OnboardingButton: View {
             Text(title)
                 
         }
-        .customButtonStyle(backgroundColor: .black)
+        .customButtonStyle()
     }
 }
 

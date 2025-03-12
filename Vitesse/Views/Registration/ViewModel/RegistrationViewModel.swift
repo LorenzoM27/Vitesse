@@ -18,14 +18,31 @@ final class RegistrationViewModel: ObservableObject {
     
     @Published var errorMessage: String = ""
     @Published var successMessage: String = ""
+    @Published var isRegistrationSuccessful: Bool = false
     
     private let apiService: APIService
     
-    init(apiService: APIService) {
+    init(apiService: APIService = APIService()) {
         self.apiService = apiService
     }
     
-    func validateFields() -> Bool {
+    func register() async {
+        guard validateFields() else { return }
+        
+        let endpoint = APIEndpoint.register(email: email, password: password, firstName: firstName, lastName: lastName)
+        
+        do {
+            try await apiService.requestWithoutReturn(endpoint: endpoint)
+            successMessage = "Inscription réussie"
+            isRegistrationSuccessful = true
+        } catch {
+           errorMessage = "Erreur lors de l'inscription"
+        }
+        
+        print("Utilisateur inscrit avec succès.")
+    }
+    
+   private func validateFields() -> Bool {
         
         if firstName.isEmpty || lastName.isEmpty {
             errorMessage = "Le prénom et le nom sont requis."
@@ -51,20 +68,5 @@ final class RegistrationViewModel: ObservableObject {
         return emailPredicate.evaluate(with: email)
     }
     
-
-    func register() async {
-        guard validateFields() else { return }
-        
-        let endpoint = APIEndpoint.register(email: email, password: password, firstName: firstName, lastName: lastName)
-        
-        do {
-            try await apiService.requestWithoutReturn(endpoint: endpoint)
-            successMessage = "Inscription réussie"
-        } catch {
-            print("Impossible to register")
-        }
-        
-        print("Utilisateur inscrit avec succès.")
-    }
     
 }

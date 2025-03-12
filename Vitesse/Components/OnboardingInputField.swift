@@ -12,6 +12,7 @@ struct OnboardingInputField: View {
     var title: String
     var isSecureField = false
     var placeholder: String
+    var isNote = false
     @Binding var text: String
     
     var body: some View {
@@ -29,13 +30,27 @@ struct OnboardingInputField: View {
                     )
                     .padding(.horizontal)
             } else {
-                TextField(placeholder, text: $text)
-                    .padding()
-                    .background(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.gray, lineWidth: 1)
-                    )
-                    .padding(.horizontal)
+                if isNote {
+                    TextEditor(text: $text)
+                        .frame(height: 150)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.gray, lineWidth: 1)
+                        )
+                        .padding(10)
+                } else {
+                    
+                    TextField(placeholder, text: $text)
+                        .textInputAutocapitalization(.never)
+                        .padding()
+                        .background(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.gray, lineWidth: 1)
+                        )
+                        .padding(.horizontal)
+                }
+                
+                
             }
         }
     }
