@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct CustomButtonStyle: ViewModifier {
+private struct OnboardingButtonStyle: ViewModifier {
     var backgroundColor: Color
 
     func body(content: Content) -> some View {
@@ -24,6 +24,6 @@ struct CustomButtonStyle: ViewModifier {
 
 extension View {
     func customButtonStyle(backgroundColor: Color) -> some View {
-        self.modifier(CustomButtonStyle(backgroundColor: backgroundColor))
+        self.modifier(OnboardingButtonStyle(backgroundColor: backgroundColor))
     }
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CustomInputField: View {
+struct OnboardingInputField: View {
     
     var title: String
     var isSecureField = false
@@ -42,5 +42,5 @@ struct CustomInputField: View {
 }
 
 #Preview {
-    CustomInputField(title: "Email/Username", placeholder: "nom@exemple.com", text: .constant(""))
+    OnboardingInputField(title: "Email/Username", placeholder: "nom@exemple.com", text: .constant(""))
 }
