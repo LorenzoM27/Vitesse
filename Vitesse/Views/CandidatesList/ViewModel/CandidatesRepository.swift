@@ -7,18 +7,16 @@
 
 import Foundation
 
-import Foundation
-
 @MainActor
 final class CandidatesRepository: ObservableObject {
     
-    @Published var email = ""
-    @Published var note = ""
-    @Published var linkedinURL = ""
-    @Published var firstName = ""
-    @Published var lastName = ""
-    @Published var phone = ""
-    
+//    @Published var email = ""
+//    @Published var note = ""
+//    @Published var linkedinURL = ""
+//    @Published var firstName = ""
+//    @Published var lastName = ""
+//    @Published var phone = ""
+//    
     @Published var candidates: [Candidate] = []
     
     private let apiService: APIService
@@ -38,7 +36,7 @@ final class CandidatesRepository: ObservableObject {
         }
     }
     
-    func addCandidate() async {
+    func addCandidate(email : String, note: String?, linkedinURL: String?, firstName: String, lastName: String, phone: String) async {
         let endpoint = APIEndpoint.createCandidate(email: email, firstName: firstName, lastName: lastName, phone: phone, note: note, linkedinURL: linkedinURL)
         
         do {

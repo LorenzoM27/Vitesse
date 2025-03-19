@@ -11,6 +11,7 @@ struct RegistrationView: View {
     @Environment(\.presentationMode) var presentationMode
     @StateObject var registrationViewModel =  RegistrationViewModel()
     
+    
     var body: some View {
         VStack {
             Text("Inscription")

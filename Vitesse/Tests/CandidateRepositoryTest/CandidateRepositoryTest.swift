@@ -50,16 +50,10 @@ final class CandidatesRepositoryTests: XCTestCase {
         
         let mockApiService = MockAPIService(shouldSucceed: true, response: mockCandidateDTO)
         let viewModel = CandidatesRepository(apiService: mockApiService)
-        
-        viewModel.email = "new@example.com"
-        viewModel.firstName = "John"
-        viewModel.lastName = "Doe"
-        viewModel.phone = "987654321"
-        viewModel.note = "Test note"
-        viewModel.linkedinURL = "linkedin.com/in/johndoe"
+    
         
         // When
-        await viewModel.addCandidate()
+        await viewModel.addCandidate(email: "new@example.com", note: "Test note", linkedinURL: "linkedin.com/in/johndoe", firstName: "John", lastName: "Doe", phone: "987654321")
         
         // Then
         XCTAssertEqual(viewModel.candidates.count, 1, "Have to be added one candidate")
@@ -71,15 +65,9 @@ final class CandidatesRepositoryTests: XCTestCase {
         let mockApiService = MockAPIService(shouldSucceed: false, error: URLError(.badServerResponse))
         let viewModel = CandidatesRepository(apiService: mockApiService)
         
-        viewModel.email = "new@example.com"
-        viewModel.firstName = "John"
-        viewModel.lastName = "Doe"
-        viewModel.phone = "987654321"
-        viewModel.note = "Test note"
-        viewModel.linkedinURL = "linkedin.com/in/johndoe"
         
         // When
-        await viewModel.addCandidate()
+        await viewModel.addCandidate(email: "new@example.com", note: "Test note", linkedinURL: "linkedin.com/in/johndoe", firstName: "John", lastName: "Doe", phone: "987654321")
         
         // Then
         XCTAssertTrue(viewModel.candidates.isEmpty, "None candidate have to be added")

@@ -13,10 +13,7 @@ final class LoginViewModelTests: XCTestCase {
     
     func testLoginSuccess() async {
         // Given
-        let mockApiService = MockAPIService(
-            shouldSucceed: true,
-            response: LoginResponse(token: "mockToken123", isAdmin: false)
-        )
+        let mockApiService = MockAPIService(shouldSucceed: true, response: LoginResponse(token: "mockToken123", isAdmin: false))
         let viewModel = LoginViewModel(apiService: mockApiService)
         
         viewModel.emailOrUsername = "test@example.com"
@@ -33,10 +30,7 @@ final class LoginViewModelTests: XCTestCase {
     
     func testLoginFailure() async {
            // Given
-           let mockApiService = MockAPIService(
-               shouldSucceed: false,
-               error: URLError(.userAuthenticationRequired)
-           )
+           let mockApiService = MockAPIService(shouldSucceed: false, error: URLError(.userAuthenticationRequired))
            let viewModel = LoginViewModel(apiService: mockApiService)
            
            viewModel.emailOrUsername = "wrong@example.com"

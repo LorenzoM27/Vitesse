@@ -11,9 +11,6 @@ struct CandidateRowView: View {
     
     @ObservedObject var candidateFavorite : CandidatesRepository
     let candidate : Candidate
-//    let firstName: String
-//    let lastName: String
-//    let isFavorite: Bool
     
     var body: some View {
         HStack {

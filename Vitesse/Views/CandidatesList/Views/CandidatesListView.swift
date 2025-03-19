@@ -65,7 +65,7 @@ struct CandidatesListView: View {
                                 }
                             } label: {
                                 Text(isEditing ? "Terminer" : "Éditer")
-                                    .foregroundStyle(.black)
+                                    .foregroundStyle(Color("AppColor"))
                             }
                         }
                         

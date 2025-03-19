@@ -1,3 +1,11 @@
+//
+//  CandidateDetailViewModelTests.swift
+//  CandidateDetailViewModelTests
+//
+//  Created by Lorenzo Menino on 12/03/2025.
+//
+
+
 import XCTest
 @testable import Vitesse
 

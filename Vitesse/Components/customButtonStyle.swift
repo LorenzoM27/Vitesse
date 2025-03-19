@@ -8,21 +8,21 @@
 
 import SwiftUI
 
-private struct customButtonStyle: ViewModifier {
+private struct OnboardingButtonStyle: ViewModifier {
 
     func body(content: Content) -> some View {
         content
             .font(.headline)
-            .foregroundColor(.white)
+            .foregroundColor(Color("TextColor"))
             .padding()
             .frame(maxWidth: .infinity)
-            .background(.black)
+            .background(Color("AppColor"))
             .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }
 
 extension View {
     func customButtonStyle() -> some View {
-        self.modifier(customButtonStyle())
+        self.modifier(OnboardingButtonStyle())
     }
 }

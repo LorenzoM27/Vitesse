@@ -26,17 +26,19 @@ struct EditableFieldView: View {
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                 } else {
                     ZStack(alignment: .topLeading) {
-                        
-                        Text(label)
-                            .foregroundColor(.gray)
-                            .padding(10)
+                    
+                        if value.isEmpty {
+                            Text(label)
+                                .foregroundColor(.black)
+                                .padding(10)
+                        }
                         
                         
                         TextEditor(text: $value)
                             .frame(height: 150)
                             .padding(10)
                             .background(Color.clear) // Supprime le fond du TextEditor
-                            .scrollContentBackground(.hidden) // Supprime l'arrière-plan flou (iOS 16+)
+                            .scrollContentBackground(.hidden) // Supprime l'arrière-plan flou
                     }
                     .padding(4)
                     .overlay(
@@ -64,7 +66,8 @@ struct EditableFieldView: View {
                                 RoundedRectangle(cornerRadius: 10)
                                     .stroke(Color.gray, lineWidth: 1)
                             )
-                            .background(Color.white)
+                            .foregroundStyle(Color("AppColor"))
+                            .background(Color("TextColor"))
                             .cornerRadius(10)
                     }
                     

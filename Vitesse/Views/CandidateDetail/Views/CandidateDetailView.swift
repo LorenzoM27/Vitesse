@@ -12,7 +12,6 @@ struct CandidateDetailView: View {
     @StateObject var candidateDetail = CandidateDetailViewModel()
     @ObservedObject var updateCandidate: CandidatesRepository
     @State var isEditing = false
-    //let id : String
     let candidate : Candidate
     @State var phone = ""
     @State var email = ""
@@ -27,19 +26,19 @@ struct CandidateDetailView: View {
                 Text((candidateDetail.candidateDetail.firstName) + " " + (candidateDetail.candidateDetail.lastName))
                     .font(.title)
                 Spacer()
-                Button {
-                    if AdminManager.shared.isAdmin {
+                
+                if AdminManager.shared.isAdmin {
+                    Button {
                         Task {
                             await updateCandidate.updateFavorite(candidateId: "\(candidate.id)")
+                            await candidateDetail.fetchCandidateDetail(id: "\(candidate.id)")
+                            
                         }
+                    } label: {
+                        Image(systemName: candidateDetail.candidateDetail.isFavorite ? "star.fill" : "star")
                     }
-                } label: {
-                    if candidate.isFavorite {
-                        Image(systemName: "star.fill")
-                    } else {
-                        Image(systemName: "star")
-                    }
-                   
+                   .buttonStyle(.plain)
+
                 }
 
                 
@@ -88,7 +87,7 @@ struct CandidateDetailView: View {
                     }
                 } label: {
                     Text(isEditing ? "Terminer" : "Éditer")
-                        .foregroundStyle(.black)
+                        .foregroundStyle(Color("AppColor"))
                 }
             }
         }
