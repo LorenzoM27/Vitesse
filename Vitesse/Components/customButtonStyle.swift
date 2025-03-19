@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-private struct OnboardingButtonStyle: ViewModifier {
+private struct customButtonStyle: ViewModifier {
 
     func body(content: Content) -> some View {
         content
@@ -23,6 +23,6 @@ private struct OnboardingButtonStyle: ViewModifier {
 
 extension View {
     func customButtonStyle() -> some View {
-        self.modifier(OnboardingButtonStyle())
+        self.modifier(customButtonStyle())
     }
 }
