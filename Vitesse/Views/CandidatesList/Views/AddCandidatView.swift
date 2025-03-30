@@ -20,7 +20,7 @@ struct AddCandidatView: View {
                 }) {
                     Image(systemName: "xmark")
                         .font(.headline)
-                        .foregroundColor(.black)
+                        .foregroundColor(Color("AppColor"))
                         .padding()
                 }
                 Spacer()

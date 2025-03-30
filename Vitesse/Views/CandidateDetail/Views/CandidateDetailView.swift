@@ -10,7 +10,7 @@ import SwiftUI
 struct CandidateDetailView: View {
     
     @StateObject var candidateDetail = CandidateDetailViewModel()
-    @ObservedObject var updateCandidate: CandidatesRepository
+    @ObservedObject var repository: CandidatesRepository
     @State var isEditing = false
     let candidate : Candidate
     @State var phone = ""
@@ -30,7 +30,7 @@ struct CandidateDetailView: View {
                 if AdminManager.shared.isAdmin {
                     Button {
                         Task {
-                            await updateCandidate.updateFavorite(candidateId: "\(candidate.id)")
+                            await repository.updateFavorite(candidateId: "\(candidate.id)")
                             await candidateDetail.fetchCandidateDetail(id: "\(candidate.id)")
                             
                         }

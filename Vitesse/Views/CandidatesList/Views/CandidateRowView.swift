@@ -32,7 +32,7 @@ struct CandidateRowView: View {
         .padding()
         .overlay(
             RoundedRectangle(cornerRadius: 8)
-                .stroke(Color.black, lineWidth: 2)
+                .stroke(Color("AppColor"), lineWidth: 2)
         )
     }
 }

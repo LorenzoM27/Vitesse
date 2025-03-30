@@ -117,7 +117,7 @@ struct CandidatesListView: View {
             }
             .navigationDestination(isPresented: $isDetailViewPresented) {
                 if let selectedCandidate {
-                    CandidateDetailView(updateCandidate: candidatesRepository, candidate: selectedCandidate)
+                    CandidateDetailView(repository: candidatesRepository, candidate: selectedCandidate)
                 }
             }
             .task {

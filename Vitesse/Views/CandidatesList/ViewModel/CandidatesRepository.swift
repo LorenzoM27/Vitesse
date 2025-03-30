@@ -10,13 +10,6 @@ import Foundation
 @MainActor
 final class CandidatesRepository: ObservableObject {
     
-//    @Published var email = ""
-//    @Published var note = ""
-//    @Published var linkedinURL = ""
-//    @Published var firstName = ""
-//    @Published var lastName = ""
-//    @Published var phone = ""
-//    
     @Published var candidates: [Candidate] = []
     
     private let apiService: APIService
